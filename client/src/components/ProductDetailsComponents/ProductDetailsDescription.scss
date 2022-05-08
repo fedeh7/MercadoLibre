@@ -1,0 +1,15 @@
+@import "./../../constants/main.scss";
+
+.product-details-description {
+	margin: 32px;
+	margin-top: 0;
+
+	.product-details-description-title {
+		font-size: 28px;
+		color: $meli-dark;
+	}
+	.description {
+		font-size: 16px;
+		color: $meli-grey;
+	}
+}

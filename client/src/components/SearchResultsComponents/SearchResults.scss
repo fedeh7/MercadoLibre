@@ -1,0 +1,14 @@
+@import "./../../constants/main.scss";
+
+.search-results {
+	padding: 16px;
+	width: 100%;
+
+	hr {
+		margin: 0;
+		padding: 0;
+		height: 1px;
+		border: none;
+		background-color: $meli-light-grey;
+	}
+}

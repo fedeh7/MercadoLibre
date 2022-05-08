@@ -1,0 +1,36 @@
+@import "./../../../constants/main.scss";
+
+.error-notification-container {
+	display: block;
+	padding: 50px;
+	text-align: center;
+	background-color: white;
+
+	font-size: 24px;
+	font-weight: 600;
+	h1 {
+		margin: 0;
+		color: red;
+		margin-bottom: 15px;
+	}
+	p {
+		margin: 0;
+		margin-bottom: 20px;
+	}
+	button {
+		margin: 0;
+		padding: 0;
+		background: none;
+		border: none;
+
+		background-color: $meli-blue;
+		padding: 10px;
+		border-radius: 4px;
+
+		font-size: 20px;
+		font-weight: 600;
+		color: white;
+
+		cursor: pointer;
+	}
+}

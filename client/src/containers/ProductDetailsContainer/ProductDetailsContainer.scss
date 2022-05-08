@@ -1,0 +1,20 @@
+@import "./../../constants/main.scss";
+
+.product-details-container {
+	.product-details-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		background-color: white;
+
+		.product-details-left-content {
+			width: 70%;
+			margin: 32px;
+		}
+		.product-details-right-content {
+			width: 30%;
+			margin: 32px;
+		}
+	}
+}

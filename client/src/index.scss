@@ -1,0 +1,24 @@
+@import "./constants/main.scss";
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: $meli-light-grey;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 $main-content-horizontal-margin;
+	width: $main-content-width;
+}

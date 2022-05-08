@@ -1,0 +1,23 @@
+@import "./../../../constants/main.scss";
+
+.loading {
+	margin-top: 100px;
+	display: flex;
+	justify-content: center;
+
+	&::after {
+		content: "";
+		width: 75px;
+		height: 75px;
+		border: 15px solid #cccccc;
+		border-top-color: $meli-blue;
+		border-radius: 50%;
+		animation: loading 1s ease infinite;
+	}
+}
+
+@keyframes loading {
+	to {
+		transform: rotate(1turn);
+	}
+}

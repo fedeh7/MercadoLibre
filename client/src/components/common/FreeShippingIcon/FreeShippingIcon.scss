@@ -1,0 +1,23 @@
+$size-small: 20px;
+$size-large: 40px;
+
+.free-shipping-icon-container {
+	.free-shipping-icon {
+		display: inline-block;
+		background-image: url("./../../../assets/ic_shipping@2x.png.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100%;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.small {
+	width: $size-small;
+	height: $size-small;
+}
+.large {
+	width: $size-large;
+	height: $size-large;
+}

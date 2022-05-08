@@ -1,0 +1,19 @@
+@import "./../../constants/main.scss";
+
+.breadcrumbs-container {
+	.breadcrumbs-content {
+		justify-content: left;
+		padding: 16px 0px;
+		color: $meli-grey;
+		font-size: 14px;
+		font-weight: 600;
+
+		.breadcrumbs-active {
+			color: $meli-dark-grey;
+		}
+		p {
+			margin: 0;
+			padding: 0;
+		}
+	}
+}

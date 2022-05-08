@@ -1,0 +1,1 @@
+export { FreeShippingIcon } from "./FreeShippingIcon";
