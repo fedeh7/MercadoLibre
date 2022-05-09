@@ -42,7 +42,7 @@ export const SearchResultsItem = ({ item, redirectToItemDetails }) => {
 	return (
 		<div className="search-results-item" onClick={onClick}>
 			<div className="search-results-item-picture">
-				<img src={picture} alt="asd" className="picture" />
+				<img src={picture} alt={title} className="picture" />
 			</div>
 			<div className="search-results-item-info">
 				<PriceWithIcon shipping={free_shipping} price={price} />

@@ -40,6 +40,7 @@ export const ProductDetailsContainer = ({ setBreadcrumbs }) => {
 					<div className="product-details-left-content">
 						<ProductDetailsPicture
 							picture={apiItemData?.item?.picture}
+							title={apiItemData?.item?.title}
 						/>
 						<ProductDetailsDescription
 							description={apiItemData?.item?.description}

@@ -3,5 +3,10 @@
 
 	display: flex;
 	margin-right: 2%;
-	height: 50px;
+
+	.logo {
+		height: 50px;
+		width: 75px;
+		object-fit: contain;
+	}
 }

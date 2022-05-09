@@ -6,7 +6,7 @@ import "./SearchBarLogo.scss";
 export const SearchBarLogo = ({ redirectToHome }) => {
 	return (
 		<div className="search-bar-logo" onClick={redirectToHome}>
-			<img src={Logo} alt="Meli Logo" />
+			<img src={Logo} alt="Meli Logo" className="logo" />
 		</div>
 	);
 };
