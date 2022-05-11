@@ -2,6 +2,12 @@
 
 La app cuenta con pantallas de barra de busqueda, resultados de busqueda y detalles de producto
 
+Se tuvo en cuenta Accesibilidad, Performance, SEO, y Escalabilidad
+
+Demo:
+https://user-images.githubusercontent.com/48955312/167748188-649a6a59-139f-4a7c-a1f7-b08b6cdc9baa.mp4
+
+
 ## Instrucciones para probarla
 
 Para probar la app es muy sencillo:
