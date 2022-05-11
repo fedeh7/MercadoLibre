@@ -6,7 +6,7 @@ import { navigateToSearchResults, navigateToHome } from "../../actions";
 
 import "./SearchBarContainer.scss";
 
-export const SearchBarContainer = () => {
+export const SearchBarContainer = ({ setBreadcrumbs }) => {
 	const [userSearchBarData, setUserSearchBarData] = useState();
 	const navigate = useNavigate();
 
@@ -15,6 +15,7 @@ export const SearchBarContainer = () => {
 	};
 
 	const redirectToHome = () => {
+		setBreadcrumbs([]);
 		navigateToHome({ navigate });
 	};
 

@@ -16,7 +16,7 @@ const App = () => {
 	const [breadcrumbs, setBreadcrumbs] = useState();
 	return (
 		<>
-			<SearchBarContainer />
+			<SearchBarContainer setBreadcrumbs={setBreadcrumbs} />
 			<BreadCrumbsContainer breadcrumbs={breadcrumbs} />
 
 			<Routes>
