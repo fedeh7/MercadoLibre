@@ -38,11 +38,14 @@ La barra de busqueda es constante en todas las pantallas y cada una de ellas cue
 
 #### Estructura del Cliente
 
-Todos los componentes fueron atomizados para poder ser reutilizados en donde se requiera.
-Cada componente tiene su propio archivo scss para estilarlo.
+Todos los componentes fueron atomizados para poder ser reutilizados en donde se requiera y cada componente tiene su propio archivo scss para estilarlo.
+
 Las pantallas principales tienen sus propios Contenedores donde ensamblan la vista importando los componentes que nesesiten, en este caso la mayoria de los componentes solo son utilizados una ves por su contenedor padre, es por esta razon que dentro del directorio de componentes se crearon directorios con los nombres de las pantallas en las que esos componentes son utilizados.
+
 Algunos componentes sin embargo puede ser utilizados en varias pantallas distintas, estos componentes son comunes asi que fueron creados en el directorio components/commons.
+
 Las distintas acciones que los componentes pueden hacer, como redireccionar o llamar apis fueron creadas en dentro del directorio de actions, para que cualquier componente pueda importar dicha funcionalidad si lo nesesita.
+
 Los fetch a las apis fueron creadas en su propio directorio de apis por la misma razon que las actions.
 
 #### Barra de busqueda
@@ -55,15 +58,21 @@ La busqueda se puede disparar tanto con la tecla Enter como clickeando en el bot
 #### Resultados de la busqueda
 
 Esta pantalla muestra los resultados de la busqueda realizada.
+
 En el momento en el esta pantalla se renderiza se hace una llamada a la api de busqueda, donde se utilizan los string params que esten en la url para completar la url de la api.
+
 Mientras la aplicacion espera la respuesta de la Api se renderisa un spinner para indicarle al usuario que estamos esperando la informacion, si la Api respondiera con un error en este punto de la ejecucion, se renderiza un mensaje de error indicandole al usuario que algo salio mal.
 
-Si la respuesta de la api es exitosa se invocan los componentes correspondientes para formar la pantalla de resultados de busqueda, cada uno de los items que se muestran se pueden clickear para navegar a la pantalla de detalles del producto, la navegacion se hace de la misma manera que la de resultados de busqueda, se hace una redireccion con el id del producto como parametro de la url.
+Si la respuesta de la api es exitosa se muestran los componentes correspondientes para formar la pantalla de resultados de busqueda.
+
+Cada uno de los items que se muestran se pueden clickear para navegar a la pantalla de detalles del producto, esta navegacion se hace de la misma manera que la de resultados de busqueda, se hace una redireccion con el id del producto como parametro de la url de esta forma 'items/id'.
 
 #### Detalles del producto
 
 Esta pantalla muestra los detalles del producto seleccionado.
+
 En el momento en el que esta pantalla se renderiza se hace una llamada a la api de detalles, donde se usa el id de la url para completar la url de la api.
+
 De la misma forma que la pantalla de resultados de busqueda, mientras la aplicacion espera la respuesta de la Api se renderisa un spinner para indicarle al usuario que estamos esperando la informacion, si la Api respondiera con un error en este punto de la ejecucion, se renderiza un mensaje de error indicandole al usuario que algo salio mal.
 
 ### Servidor
@@ -73,8 +82,6 @@ El servidor es mas chico que el cliente y su estructura es mas simple, cuenta so
 Se crearon 2 apis, una para la busqueda y otra para los detalles del producto, cada una llama a las apis de mercadolibre propuestas por el documento del challenge
 
 ## Objetivos del challenge
-
-Objetivo (Copiado del PDF):
 
 Tenés que usar el siguiente stack tecnológico para construir la aplicación:
 
