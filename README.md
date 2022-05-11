@@ -8,7 +8,7 @@ Demo:
 https://user-images.githubusercontent.com/48955312/167748188-649a6a59-139f-4a7c-a1f7-b08b6cdc9baa.mp4
 
 
-## Instrucciones para probarla
+## Instrucciones para probar la aplicacion
 
 Para probar la app es muy sencillo:
 
