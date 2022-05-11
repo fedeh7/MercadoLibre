@@ -17,7 +17,9 @@ export const HomePageContainer = () => {
 				<p>- Pantalla de detalles del item</p>
 				<p>- Breadcrumbs</p>
 				<p>- Loading spinner</p>
-				<p>- Mensajes de error</p>
+				<p>- Mensajes de error (en caso de que la api falle)</p>
+				<p>- Testing de componentes</p>
+				<p>- Testing de funciones</p>
 			</div>
 		</div>
 	);

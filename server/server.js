@@ -1,19 +1,24 @@
 import express from "express";
-import fetch from "node-fetch";
-import { formatSearchApiResponse, formatItemApiResponse } from "./utils.js";
+import {
+	mercadolibreSearchApiCall,
+	mercadolibreDetailsApiCall,
+	mercadolibreItemDescriptionApiCall,
+	mercadolibreItemCategoriesApiCall,
+} from "./actions/apiCalls.js";
+import {
+	formatSearchApiResponse,
+	formatItemApiResponse,
+} from "./actions/utils.js";
 
 const app = express();
 
 app.get("/api/items", async (req, res) => {
 	try {
 		const searchQuery = req.query.search;
-		const searchData = await fetch(
-			`https://api.mercadolibre.com/sites/MLA/search?q=${searchQuery}&limit=4`
-		)
-			.then((data) => data.json())
-			.then((dataJson) => formatSearchApiResponse(dataJson));
+		const searchData = await mercadolibreSearchApiCall({ searchQuery });
 
-		res.status(200).send(searchData);
+		const formattedSearchData = formatSearchApiResponse({ searchData });
+		res.status(200).send(formattedSearchData);
 	} catch {
 		res.status(500).send({
 			errorMessage:
@@ -25,22 +30,16 @@ app.get("/api/items", async (req, res) => {
 app.get("/api/items/:id", async (req, res) => {
 	try {
 		const id = req.params.id;
-		const itemData = await fetch(`https://api.mercadolibre.com/items/${id}`)
-			.then((data) => data.json())
-			.then((dataJson) => dataJson);
+		const itemData = await mercadolibreDetailsApiCall({ id });
 
-		const itemDescription = await fetch(
-			`https://api.mercadolibre.com/items/${id}/description`
-		)
-			.then((data) => data.json())
-			.then((dataJson) => dataJson);
+		const itemDescription = await mercadolibreItemDescriptionApiCall({
+			id,
+		});
 
 		const category_id = itemData.category_id;
-		const itemCategories = await fetch(
-			`https://api.mercadolibre.com/categories/${category_id}`
-		)
-			.then((data) => data.json())
-			.then((dataJson) => dataJson);
+		const itemCategories = await mercadolibreItemCategoriesApiCall({
+			category_id,
+		});
 
 		const formattedData = formatItemApiResponse({
 			itemData,

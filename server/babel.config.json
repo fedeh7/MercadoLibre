@@ -1,0 +1,15 @@
+{
+	"presets": ["@babel/preset-env"],
+	"plugins": ["@babel/plugin-transform-modules-commonjs"]
+	// "env": {
+	// 	"production": {
+	// 		"plugins": ["transform-es2015-modules-commonjs"]
+	// 	},
+	// 	"dev": {
+	// 		"plugins": ["transform-es2015-modules-commonjs"]
+	// 	},
+	// 	"test": {
+	// 		"plugins": ["transform-es2015-modules-commonjs"]
+	// 	}
+	// }
+}
